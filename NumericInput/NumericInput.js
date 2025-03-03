@@ -12,9 +12,9 @@ export default class NumericInput extends Component {
         super(props)
         const noInitSent = props.initValue !== 0 && !props.initValue
         this.state = {
-            value: noInitSent ? props.value ? props.value : 0 : props.initValue,
-            lastValid: noInitSent ? props.value ? props.value : 0 : props.initValue,
-            stringValue: (noInitSent ? props.value ? props.value : 0 : props.initValue).toString(),
+            value: noInitSent ? props.value ? props.value : 1 : props.initValue,
+            lastValid: noInitSent ? props.value ? props.value : 1 : props.initValue,
+            stringValue: (noInitSent ? props.value ? props.value : 1 : props.initValue).toString(),
         }
         this.ref = null
     }

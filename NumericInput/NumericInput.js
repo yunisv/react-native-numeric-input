@@ -206,7 +206,7 @@ export default class NumericInput extends Component {
                 borderWidth: 0
             },
             this.props.rounded ?
-                { borderTopLeftRadius: borderRadiusTotal, borderBottomLeftRadius: borderRadiusTotal }
+                { borderTopLeftRadius: borderRadiusTotal, borderBottomLeftRadius: borderRadiusTotal, borderTopRightRadius: 1 }
                 : {}]
         const inputWraperStyle = {
             alignSelf: 'center',

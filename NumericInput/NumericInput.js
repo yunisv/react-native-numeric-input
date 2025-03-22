@@ -20,11 +20,11 @@ export default class NumericInput extends Component {
     }
 
     // this.props refers to the new props
-    componentDidUpdate() {
+    componentDidUpdate(prevProps) {
         const initSent = !(this.props.initValue !== 0 && !this.props.initValue);
 
-        // compare the new value (props.initValue) with the existing/old one (this.state.value)
-        if (this.props.initValue !== this.state.value && initSent) {
+        if (this.props.initValue !== prevProps.initValue && initSent) {
+            // Если initValue изменился, обновляем state
             this.setState({
                 value: this.props.initValue,
                 lastValid: this.props.initValue,
